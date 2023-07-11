@@ -35,9 +35,9 @@ class CatatanInput extends React.Component {
   OnSubmitEventHandler(event) {
     event.preventDefault();
     const { title, body } = this.state;
-    const createdAt = new Date().toISOString(); 
+    const createdAt = new Date().toISOString(); // Menggunakan format tanggal ISO 8601
 
-    this.props.AddCatatan({ title, body, createdAt }); 
+    this.props.AddCatatan({ title, body, createdAt }); // Mengirim createdAt yang baru ke handler AddCatatan
 
     // Reset form setelah submit
     this.setState({
